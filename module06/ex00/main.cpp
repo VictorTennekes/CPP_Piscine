@@ -94,10 +94,11 @@ void	printValue(long double value, bool flags[], long double limit) {
 int main(int ac, char **av) {
 	long double value;
 	bool		flags[2] = {false, false};
-	std::string input = av[1];
+	std::string input;
 	int			type;
 
-	if (ac != 2 || !av[0]) return(error("Invalid input"));
+	if (ac != 2 || !av[1]) error("Invalid input");
+	input = av[1];
 	static std::string specialNum[6] = {
 		"nan",
 		"nanf",

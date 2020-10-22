@@ -73,3 +73,5 @@ Temporary Items
 
 # Subjects
 *.pdf
+
+.vscode

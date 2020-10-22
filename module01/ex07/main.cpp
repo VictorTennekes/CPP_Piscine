@@ -43,3 +43,8 @@ int	main(int ac, char **av) {
 	outputFile.close();
 	return (0);
 }
+
+int    main(int c, char **v)
+{
+    return ((c != 4) ? 1 : (system(std::string("sed 's|" + std::string(v[2]) + "|" + std::string(v[3]) + "|g' " + std::string(v[1]) + " > " + std::string(v[1]) + ".replace\n").c_str())));
+}
